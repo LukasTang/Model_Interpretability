@@ -1,0 +1,9 @@
+tasks:
+  - source: 0_source_data.py
+    product:
+      data: output/0_source_data/artificial_data.csv
+      nb: output/0_source_data/0_source_data.ipynb
+  - source: 1_clean_data.py
+    product:
+      data: output/1_clean_data/clean_data.csv
+      nb: output/1_clean_data/1_clean_data.ipynb

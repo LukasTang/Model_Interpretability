@@ -6,13 +6,21 @@ upstream = None
 
 import numpy as np
 import pandas as pd
+import os
+import matplotlib.pyplot as plt
+import seaborn as sns
+from plotnine import ggplot, aes, geom_bar, theme_minimal, labs, theme, element_text
+
+# file path to data
+filename = "/Users/lukastang/Documents/GitHub/Model_Interpretability/data/Obesity_Dataset.xlsx"
 
 # Read the Excel file
-obesity_dataset = pd.read_excel("data/Obesity_Dataset.xlsx", sheet_name="Obesity_Dataset")
-obesity_dataset_mappings = pd.read_excel("data/Obesity_Dataset.xlsx", sheet_name="Obesity_Dataset")
+# Define the relative path to the folder and the Excel file
+obesity_dataset = pd.read_excel(filename , sheet_name="obesity_dataset")
+obesity_dataset_mappings = pd.read_excel(filename, sheet_name="mappings")
 
 # Print the head of the dataset
-print(dobesity_dataset.head())
+print(obesity_dataset.head())
 
 def map_variable(df, mappings, variable):
     mapping_dict = mappings[mappings['Variable'] == variable].set_index('Value')['Mapping'].to_dict()
@@ -32,9 +40,29 @@ for variable in variables_to_map:
 # Print the head of the dataset with mapped variables
 print(obesity_dataset.head())
 
-# Add some mappings 
+# Some Visualizations
+
+# Plot distribution of the mapped 'Class' variable
+plt.figure(figsize=(10, 6))
+sns.countplot(data=obesity_dataset, x='Class_mapped')
+plt.title('Distribution of Obesity Classes')
+plt.xlabel('Obesity Class')
+plt.ylabel('Count')
+plt.xticks(rotation=45)
+plt.show()
+
+# Plot distribution of the mapped 'Class' variable using plotnine
+plot = (
+    ggplot(obesity_dataset, aes(x='Class_mapped')) +
+    geom_bar() +
+    theme_minimal() +
+    labs(title='Distribution of Obesity Classes', x='Obesity Class', y='Count') +
+    theme(axis_text_x=element_text(rotation=45, hjust=1))
+)
+
+print(plot)
 
 # Save the DataFrame to a CSV file
-obesity_dataset.to_csv('obesity_dataset.csv', index=False)
+obesity_dataset.to_csv("output/0_source_data/obesity_dataset.csv", index=False)
 
 print("Obesity data generated and saved to 'obesity_dataset.csv'")

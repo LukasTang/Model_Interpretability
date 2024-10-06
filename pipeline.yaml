@@ -3,6 +3,11 @@ tasks:
     product:
       data: output/0_source_data/artificial_data.csv
       nb: output/0_source_data/0_source_data.ipynb
+      on_finish: 0_source_data_test.py
+  - source: 0_financial_data.py
+    product:
+      data: output/0_financial_data/financial_data.csv
+      nb: output/0_financial_data/financial_data.ipynb
   - source: 1_clean_data.py
     product:
       data: output/1_clean_data/clean_data.csv

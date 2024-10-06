@@ -1,0 +1,41 @@
+Variable,Value,Mapping
+Sex,1,Male
+Sex,2,Female
+Overweight_Obese_Family,1,Yes
+Overweight_Obese_Family,2,No
+Consumption_of_Fast_Food,1,Yes
+Consumption_of_Fast_Food,2,No
+Frequency_of_Consuming_Vegetables,1,Rarely
+Frequency_of_Consuming_Vegetables,2,Sometimes
+Frequency_of_Consuming_Vegetables,3,Always
+Number_of_Main_Meals_Daily,1,1 or 2 
+Number_of_Main_Meals_Daily,2,3
+Number_of_Main_Meals_Daily,3,More than 3
+Food_Intake_Between_Meals,1,Rarely
+Food_Intake_Between_Meals,2,Sometimes
+Food_Intake_Between_Meals,3,Usually
+Food_Intake_Between_Meals,4,Always
+Smoking,1,Yes
+Smoking,2,No
+Liquid_Intake_Daily,1,Less than 1 Liter
+Liquid_Intake_Daily,2,Between 1 and 2 Liters
+Liquid_Intake_Daily,3,More than 2 Liters
+Calculation_of_Calorie_Intake,1,Yes
+Calculation_of_Calorie_Intake,2,No
+Physical_Excercise,1,No sports
+Physical_Excercise,2,1-2 days per week
+Physical_Excercise,3,3-4 days per week
+Physical_Excercise,4,5-6 days per week
+Physical_Excercise,5,7 days per week
+Schedule_Dedicated_to_Technology,1,1-2 hours per day
+Schedule_Dedicated_to_Technology,2,3-5 hours per day
+Schedule_Dedicated_to_Technology,3,More than 5 hourse per day
+Type_of_Transportation_Used,1,Automobile
+Type_of_Transportation_Used,2,Motorbike
+Type_of_Transportation_Used,3,Bike
+Type_of_Transportation_Used,4,Public Transportation
+Type_of_Transportation_Used,5,Walking
+Class,1,Underweight
+Class,2,Normal
+Class,3,Overweight
+Class,4,Obesity

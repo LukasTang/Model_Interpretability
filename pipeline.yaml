@@ -1,7 +1,8 @@
 tasks:
   - source: 0_source_data.py
     product:
-      data: output/0_source_data/obesity_dataset.csv
+      obesity_data: "output/0_source_data/Processed_Obesity_Dataset.csv"
+      obesity_mappings: "output/0_source_data/Obesity_Dataset_Mappings.csv"
       nb: output/0_source_data/0_source_data.ipynb
       on_finish: 0_source_data_test.py
   - source: 0_financial_data.py

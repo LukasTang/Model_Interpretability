@@ -4,11 +4,14 @@ upstream = ['0_source_data']
 # -
 
 import pandas as pd
+from obesity_utils import set_categorical_order as ut
 
-df = pd.read_csv(upstream['0_source_data']['data'])
+obesity_dataset = pd.read_csv(upstream['0_source_data']['obesity_data'])
+obesity_dataset_mappings = pd.read_csv(upstream['0_source_data']['obesity_mappings'])
 # some data cleaning code...
 
-df.to_csv('output/1_clean_data/clean_data.csv', index=False)
+# Set the categorical order for the specified variables
+ut.set_categorical_order(obesity_dataset, obesity_dataset_mappings)
 
 print("Cleaned data generated and saved to 'artificial_data.csv'")
 

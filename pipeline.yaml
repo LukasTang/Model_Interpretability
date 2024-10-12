@@ -9,7 +9,7 @@ tasks:
     product:
       data: output/0_financial_data/financial_data.csv
       nb: output/0_financial_data/financial_data.ipynb
-  - source: 1_clean_data.py
+  - source: 1_clean_analyse_data.py
     product:
-      data: output/1_clean_data/clean_data.csv
-      nb: output/1_clean_data/1_clean_data.ipynb
+      data: output/1_clean_analyse_data/clean_analyse_data.csv
+      nb: output/1_clean_analyse_data/1_clean_analyse_data.ipynb
